@@ -46,11 +46,13 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      font-size:12px;
-      letter-spacing:.06em;
+      gap:20px;
+      font-size:11.5px;
+      letter-spacing:.055em;
       text-transform:uppercase;
     }
     .nav a{text-decoration:none}
+    .nav > a{white-space:nowrap}
     .links{display:flex; gap:16px; color:var(--muted)}
     .links a:hover{color:var(--ink)}
     .hero{
@@ -105,6 +107,39 @@
       max-height:520px;
       object-fit:contain;
       background:#efe7dc;
+    }
+    .hero-mosaic{
+      border:1px solid var(--line);
+      background:var(--panel);
+      padding:10px;
+      display:grid;
+      gap:10px;
+    }
+    .hero-mosaic img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      background:#efe7dc;
+      display:block;
+    }
+    .mosaic-large{
+      height:clamp(240px,32vw,390px);
+      border:1px solid var(--line);
+      background:#efe7dc;
+      padding:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .mosaic-small{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .mosaic-small img{
+      height:clamp(110px,14vw,170px);
+      border:1px solid var(--line);
+      padding:8px;
     }
     .intro-bar{
       border-top:1px solid var(--line);
@@ -376,7 +411,13 @@
         grid-template-columns:1fr;
       }
       .links{display:none}
+      .nav{font-size:10.5px}
+      .nav > a{white-space:normal}
       .hero-image img{max-height:unset}
+      .mosaic-large{height:auto}
+      .mosaic-large img{height:auto}
+      .mosaic-small{grid-template-columns:1fr}
+      .mosaic-small img{height:auto}
       .details,
       .approach,
       .selected-grid{
@@ -394,7 +435,7 @@
 <body>
   <header class="top">
     <div class="wrap nav sans">
-      <a href="#">Lydia Lin</a>
+      <a href="#">Portfolio from Lydia Lin</a>
       <nav class="links" aria-label="Primary navigation">
         <a href="#projects">Projects</a>
         <a href="#selected">Selected</a>
@@ -417,9 +458,15 @@
             Visual design for event communication, editorial layout, exhibition graphics, and small business visual proposals.
           </p>
         </div>
-        <figure class="hero-image">
-          <img src="assets/tropic-sugarcane.jpg" alt="Tropic Dossier sugarcane layout">
-        </figure>
+        <div class="hero-mosaic" aria-label="Selected portfolio works">
+          <div class="mosaic-large">
+            <img src="assets/tropic-cover.jpg" alt="Tropic Dossier visual design">
+          </div>
+          <div class="mosaic-small">
+            <img src="assets/alcohol-banner.jpg" alt="Alcohol event banner design">
+            <img src="assets/multicultural-cover.jpg" alt="Academic thesis cover design">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -427,8 +474,8 @@
       <div class="wrap intro-grid">
         <strong>Role & credit</strong>
         <span>
-          作品中的文字、活動資訊與部分原始素材由客戶、策展方或合作對象提供。作品集主要呈現 Lydia Lin 在視覺方向、排版設計、文字層級、素材整合與輸出規劃上的設計角色。<br>
-          Copy, event information, and source materials are provided by clients or collaborators. The portfolio focuses on visual direction, layout, typography, image composition, and production.
+          作品中的文字、活動資訊與部分原始素材由客戶、策展方或合作對象提供。作品集主要呈現 Lydia Lin 在視覺方向、排版設計、文字層級、素材整合與輸出規劃上的設計角色；部分印刷輸出與雙面對位整理使用 Inkscape 輔助檢查。<br>
+          Copy, event information, and source materials are provided by clients or collaborators. The portfolio focuses on visual direction, layout, typography, image composition, and production, with Inkscape used for selected print-layout checks and file preparation.
         </span>
       </div>
     </div>
@@ -461,7 +508,7 @@
             <div class="details sans">
               <div class="detail-box"><strong>Scope</strong>邀卡設計、主視覺排版、系列圖文版面</div>
               <div class="detail-box"><strong>Role</strong>視覺方向、排版、文字層級、素材整合</div>
-              <div class="detail-box"><strong>Tools</strong>Canva / visual material integration</div>
+              <div class="detail-box"><strong>Tools</strong>Canva / Inkscape print check / visual material integration</div>
             </div>
             <div class="gallery">
               <div class="frame wide"><img src="assets/tropic-cover.jpg" alt="Tropic Dossier cover"></div>
@@ -495,7 +542,7 @@
             <div class="details sans">
               <div class="detail-box"><strong>Scope</strong>主視覺、橫式 Banner、活動文宣延伸</div>
               <div class="detail-box"><strong>Role</strong>視覺排版、資訊層級、素材整合、輸出檔案</div>
-              <div class="detail-box"><strong>Tools</strong>Canva / AI-generated image material</div>
+              <div class="detail-box"><strong>Tools</strong>Canva / AI image material / Inkscape print check</div>
             </div>
             <div class="gallery">
               <div class="frame wide"><img src="assets/alcohol-banner.jpg" alt="Alcohol event banner"></div>
@@ -587,7 +634,7 @@
           <div class="approach sans">
             <div class="approach-card"><strong>01. Content structure</strong>整理文字資訊、閱讀順序與版面層級。</div>
             <div class="approach-card"><strong>02. Visual direction</strong>建立適合活動或品牌的色彩、字體與圖像語氣。</div>
-            <div class="approach-card"><strong>03. Production</strong>依使用情境製作社群、印刷或發表用輸出檔案。</div>
+            <div class="approach-card"><strong>03. Production</strong>依使用情境製作社群、印刷或發表用輸出檔案；必要時以 Inkscape 協助印刷版面、雙面對位與 PDF 檢查。</div>
           </div>
         </div>
       </div>

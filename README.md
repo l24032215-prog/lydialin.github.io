@@ -1,19 +1,11 @@
-# Lydia Lin Portfolio Website v4
+# Lydia Lin Portfolio Website v5
 
-這是調整後的作品集網站版本。
+## v5 調整內容
+- 網頁最上方文字改為：Portfolio from Lydia Lin
+- 首圖由單張酒單／內頁改為三張作品拼貼：Tropic Dossier、酒精人 Banner、A Multicultural Journey
+- 補充 Inkscape 技能：以保守方式寫為印刷版面檢查、雙面對位與 PDF 輸出整理輔助
+- 更新 Featured Projects 的 Tools 欄位與 Approach 的 Production 說明
 
-## v4 調整內容
-- 整體字級再縮小，尤其英文與 contact 區塊。
-- Email 欄位加入 `overflow-wrap:anywhere`，避免手機或窄版畫面字母重疊。
-- 文字改回較清楚、條列、專業接案者的 approach。
-- 減少第一人稱與碎碎念式語氣。
-- 圖片改用 contain 為主，避免重要文字或版面重點被裁切。
-- 名片只放正面。
-- 酒精人海報 QR code 已模糊處理。
-- Email 已放入：l24032215@gmail.com
-
-## 預覽
-直接用瀏覽器打開 index.html。
-
-## 上線
-解壓縮 zip 後，把整個資料夾拖到 Netlify Drop。
+## 更新 GitHub
+如果你目前 GitHub 已經有 assets 資料夾，這次主要可以只更新 index.html。
+如果想保險，也可以把整個資料夾內容重新上傳覆蓋。

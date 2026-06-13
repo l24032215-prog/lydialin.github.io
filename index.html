@@ -65,6 +65,20 @@
     .nav > a{white-space:nowrap}
     .links{display:flex; gap:16px; color:var(--muted)}
     .links a:hover{color:var(--ink)}
+    .site-banner{
+  max-width:var(--max);
+  margin:clamp(28px,4vw,48px) auto 0;
+  padding:0 var(--side);
+}
+
+.site-banner img{
+  width:100%;
+  max-height:420px;
+  object-fit:contain;
+  display:block;
+  border:1px solid var(--line);
+  background:var(--panel);
+}
     .hero{
       padding:clamp(52px,7vw,88px) 0 clamp(42px,6vw,70px);
     }
